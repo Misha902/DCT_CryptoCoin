@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "HCcOYhkAEqYkE5+rypkwVAfYLLAmdFWEZSKoucu/v9dh9b70AzXYv9XeqH9AnDg4/7iEtrIkZEYddVxO/0E0Ng==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\DIMA\\Documents\\GitHub\\DCT_CryptoCoin\\DCT_CryptoCoin\\DCT_CryptoCoin.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\DIMA\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\DIMA\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\DIMA\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
