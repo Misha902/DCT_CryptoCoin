@@ -5,6 +5,8 @@
         public class Cryptingup
         {
             public ExchangesModel[] exchanges { get; set; }
+            public MarketsModel[] markets { get; set; }
+            public AssetsModel[] assets { get; set; }
         }
     }
 }

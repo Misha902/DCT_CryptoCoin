@@ -26,6 +26,12 @@ namespace DCT_CryptoCoin
 
             Cryptingup obj = GetAll("https://www.cryptingup.com/api/exchanges", "exchanges");
             dataGrid.ItemsSource = obj.exchanges;
+
+            Cryptingup obj1 = GetAll("https://www.cryptingup.com/api/markets", "markets");
+            dataGrid1.ItemsSource = obj1.markets;
+
+            Cryptingup obj2 = GetAll("https://www.cryptingup.com/api/assets", "assets");
+            dataGrid2.ItemsSource = obj2.assets;
         }
         private Cryptingup GetAll(string uri, string clientResult)
         {

@@ -6,7 +6,20 @@
         xmlns:local="clr-namespace:DCT_CryptoCoin"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    
+    <Grid x:Name = "FormLayoutGrid" Background = "AliceBlue" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition Width="0*" />
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height = "*" />
+            <RowDefinition Height = "*" />
+            <RowDefinition Height = "*" />
+        </Grid.RowDefinitions>
+
         <DataGrid Name = "dataGrid" AutoGenerateColumns="false" Grid.Row="0" Margin="10,10,10,10">
             <DataGrid.Columns>
                 <DataGridTextColumn Header = "Name" Binding = "{Binding name}" />
@@ -15,5 +28,39 @@
                 <DataGridTextColumn Header = "Volume_24h" Binding = "{Binding volume_24h}"/>
             </DataGrid.Columns>
         </DataGrid>
-    </Grid>
+
+        <DataGrid Name = "dataGrid1" AutoGenerateColumns="false" Grid.Row="1" Margin="10,10,10,10">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header = "exchange_id" Binding = "{Binding exchange_id}" />
+                <DataGridTextColumn Header = "symbol" Binding = "{Binding symbol}" />
+                <DataGridTextColumn Header = "base_asset" Binding = "{Binding base_asset}"/>
+                <DataGridTextColumn Header = "quote_asset" Binding = "{Binding quote_asset}"/>
+                <DataGridTextColumn Header = "price_unconverted" Binding = "{Binding price_unconverted}"/>
+                <DataGridTextColumn Header = "price" Binding = "{Binding price}"/>
+                <DataGridTextColumn Header = "change_24h" Binding = "{Binding change_24h}"/>
+                <DataGridTextColumn Header = "spread" Binding = "{Binding spread}"/>
+                <DataGridTextColumn Header = "volume_24h" Binding = "{Binding volume_24h}"/>
+                <DataGridTextColumn Header = "status" Binding = "{Binding status}"/>
+                <DataGridTextColumn Header = "created_at" Binding = "{Binding created_at}"/>
+                <DataGridTextColumn Header = "updated_at" Binding = "{Binding updated_at}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+
+
+            <DataGrid Name = "dataGrid2" AutoGenerateColumns="false" Grid.Row="2" Margin="10,10,10,10">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header = "asset_id" Binding = "{Binding asset_id}" />
+                    <DataGridTextColumn Header = "name" Binding = "{Binding name}" />
+                    <DataGridTextColumn Header = "price" Binding = "{Binding price}"/>
+                    <DataGridTextColumn Header = "volume_24h" Binding = "{Binding volume_24h}"/>
+                    <DataGridTextColumn Header = "change_1h" Binding = "{Binding change_1h}"/>
+                    <DataGridTextColumn Header = "change_24h" Binding = "{Binding change_24h}"/>
+                    <DataGridTextColumn Header = "change_7d" Binding = "{Binding change_7d}"/>
+                    <DataGridTextColumn Header = "status" Binding = "{Binding status}"/>
+                    <DataGridTextColumn Header = "created_at" Binding = "{Binding created_at}"/>
+                    <DataGridTextColumn Header = "updated_at" Binding = "{Binding updated_at}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
 </Window>
