@@ -1,4 +1,8 @@
-﻿namespace DCT_CryptoCoin
+﻿using System.Windows.Controls;
+using System.Windows;
+using System.Collections.ObjectModel;
+
+namespace DCT_CryptoCoin
 {
     public partial class MainWindow
     {
