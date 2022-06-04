@@ -9,6 +9,7 @@ namespace DCT_CryptoCoin
         private int currentPage = 1;
         private readonly IList _objectsOnPageList;
         private readonly int _countObjectsOnPage;
+        public AssetsModel SelectedAsset { get; set; }
 
         public int CurrentPage
         {

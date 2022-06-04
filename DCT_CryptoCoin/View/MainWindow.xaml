@@ -8,55 +8,7 @@
         Title="MainWindow" Height="450" Width="800">
 
     <Grid>
-        <TabControl>
-            <TabItem Header="General">
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                    </Grid.RowDefinitions>
-
-                    <StackPanel Orientation="Horizontal" Grid.Row="1">
-                        <Button Content="&lt;" Click="OnPreviousClicked" Margin="10,2,2,2"/>
-                        <Label Grid.Row="1" Margin="0">
-                            <Label.Content>
-                                <Binding Path="CurrentPage">
-                                    <Binding.StringFormat>Current Page: {0}</Binding.StringFormat>
-                                </Binding>
-                            </Label.Content>
-                        </Label>
-                        <Button Content=">" Click="OnNextClicked" Margin="2"/>
-                    </StackPanel>
-
-                    <DataGrid Name="dataGrid" ItemsSource="{Binding}" Grid.Row="0" Margin="10" IsReadOnly="True" MouseDoubleClick="Row_DoubleClick">
-                        <DataGrid.Columns>
-                            <DataGridTextColumn Header = "Asset Id" Width="*" Binding = "{Binding asset_id}" />
-                            <DataGridTextColumn Header = "Name" Width="*" Binding = "{Binding name}" />
-                            <DataGridTextColumn Header = "Price" Width="*" Binding = "{Binding price}"/>
-                            <DataGridTextColumn Header = "change_1h" Width="*" Binding = "{Binding change_1h}"/>
-                            <DataGridTextColumn Header = "status" Width="*" Binding = "{Binding status}"/>
-                        </DataGrid.Columns>
-                    </DataGrid>
-                    <Frame Name="FramePageDetails"/>
-
-                </Grid>
-            </TabItem>
-
-            <TabItem Header="Exchanges">
-                
-            </TabItem>
-
-            <!--<TabItem Header="Markets">
-                <DataGrid>
-                    <DataGrid.ItemContainerStyle>
-                        <Style TargetType="DataGridRow">
-                            <EventSetter Event="MouseDoubleClick" Handler="Row_DoubleClick"/>
-                        </Style>
-                    </DataGrid.ItemContainerStyle>
-                </DataGrid>
-            </TabItem>-->
-            
-        </TabControl>
+        <Frame Name="FrameGeneral" NavigationUIVisibility="Hidden" />
     </Grid>
 
 </Window>

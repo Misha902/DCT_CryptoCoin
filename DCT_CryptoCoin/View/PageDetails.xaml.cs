@@ -4,10 +4,6 @@ namespace DCT_CryptoCoin.View
 {
     public partial class PageDetails : Page
     {
-        public PageDetails(AssetsModel asset)
-        {
-                
-        }
         public PageDetails()
         {
             InitializeComponent();
