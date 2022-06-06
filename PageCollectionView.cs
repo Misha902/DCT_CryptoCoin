@@ -12,6 +12,7 @@ namespace DCT_CryptoCoin
         private readonly int _countObjectsOnPage;
         public AssetsModel SelectedAsset { get; set; }
         public static List<AssetsModel> assets { get; set; }
+        public List<MarketsModel> markets { get; set; }
 
         public int CurrentPage
         {
