@@ -19,9 +19,6 @@ using static DCT_CryptoCoin.MainWindow;
 
 namespace DCT_CryptoCoin.View
 {
-    /// <summary>
-    /// Логика взаимодействия для General.xaml
-    /// </summary>
     public partial class GeneralPage : Page
     {
         private readonly PageCollectionView collectionView;
@@ -47,6 +44,21 @@ namespace DCT_CryptoCoin.View
             collectionView.SelectedAsset = (AssetsModel)AssetsGrid.SelectedItem;
 
             NavigationService.Navigate(new PageDetails(collectionView));
+        }
+        private void Search(object sender, TextChangedEventArgs e)
+        {
+            var tbxSearch = sender as TextBox;
+            if (tbxSearch.Text != "")
+            {
+                var filteredList = PageCollectionView.assets.Where(x => x.name.ToLower().Contains(tbxSearch.Text.ToLower()) 
+                    || x.asset_id.ToLower().Contains(tbxSearch.Text.ToLower()));
+
+                DataContext = new PageCollectionView(filteredList.ToList(), 10);
+            }
+            else
+            {
+                DataContext = collectionView;
+            }
         }
     }
 }

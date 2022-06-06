@@ -11,6 +11,7 @@ namespace DCT_CryptoCoin
         public readonly IList _objectsOnPageList;
         private readonly int _countObjectsOnPage;
         public AssetsModel SelectedAsset { get; set; }
+        public static List<AssetsModel> assets { get; set; }
 
         public int CurrentPage
         {
@@ -55,6 +56,11 @@ namespace DCT_CryptoCoin
         {
             _objectsOnPageList = objectsOnPageList;
             _countObjectsOnPage = objectsOnPage;
+
+            if (assets is null)
+            {
+                assets = (List<AssetsModel>)objectsOnPageList;
+            }
         }
         public void GoToNextPage()
         {
